@@ -1,0 +1,79 @@
+{
+  "devDependencies": {
+    "@alrra/travis-scripts": "^3.0.1",
+    "apache-server-configs": "^3.0.0",
+    "archiver": "^2.1.1",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.6.1",
+    "babel-register": "^6.26.0",
+    "del": "^3.0.0",
+    "eslint": "^4.19.1",
+    "eslint-config-recommended": "^2.0.0",
+    "eslint-plugin-mocha": "^5.0.0",
+    "glob": "^7.1.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-eslint": "^4.0.2",
+    "gulp-header": "^2.0.5",
+    "gulp-jscs": "^4.1.0",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.6.1",
+    "jquery": "3.3.1",
+    "mocha": "^5.1.1",
+    "modernizr": "3.6.0",
+    "normalize.css": "8.0.0",
+    "run-sequence": "^2.2.1",
+    "ssri": "^6.0.0",
+    "strip-json-comments": "^2.0.1",
+    "travis-after-all": "^1.4.5"
+  },
+  "require": {
+    "j4mie/idiorm": "^1.5"
+  },
+  "engines": {
+    "node": ">=6",
+    "npm": ">=3"
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ]
+  },
+  "frontend-configs": {
+    "directories": {
+      "archive": "archive",
+      "dist": "frontend-dist",
+      "src": "frontend-src",
+      "test": "frontend-test"
+    }
+  },
+  "backend-configs": {
+    "directories": {
+      "archive": "archive",
+      "dist": "backend-dist",
+      "src": "backend-src",
+      "test": "backend-test"
+    }
+  },
+  "homepage": "https://saascatalog.herokuapp.com/",
+  "license": "MIT",
+  "name": "SaaS-Catalog",
+  "scripts": {
+    "build": "gulp build",
+    "test": "gulp archive && mocha --require babel-core/register --reporter spec --timeout 5000"
+  },
+  "version": "0.8.0",
+  "description": "SaaS On-Demmand",
+  "files": [
+    "LICENSE",
+    "package.json",
+    "dist/",
+    "modernizr-config.json",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/matheusrv/saas-catalog.git"
+  }
+}
