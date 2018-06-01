@@ -1,2 +1,7 @@
+<<<<<<< HEAD
 archive
 node_modules
+=======
+vendor/
+.env
+>>>>>>> d3903bf25f37b16a56faba28b7580c6fa6f38540
