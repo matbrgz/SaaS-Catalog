@@ -1,7 +1,7 @@
 {
   "minify": true,
   "options": [
-    "domPrefixes",
+      "domPrefixes",
     "prefixes",
     "addTest",
     "hasEvent",
