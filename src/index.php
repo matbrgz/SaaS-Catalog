@@ -75,17 +75,11 @@
             </section>
             <section id='s-3'>
                 <h1>Clientes</h1>
-                <p>Clique <a href="#" data-toggle="modal"
-                             data-load-url="backend/login.php"
-                             data-target="#modal-lg"
-                             data-title="Clientes Login">aqui</a> para realizar login</p>
+                <p>Clique <a href="backend/login.php">aqui</a> para realizar login</p>
             </section>
             <section id='s-4'>
                 <h1>Fornecedores</h1>
-                <p>Clique <a href="#" data-toggle="modal"
-                             data-load-url="backend/login.php"
-                             data-target="#modal-lg"
-                             data-title="Fornecedores Login">aqui</a> para realizar login</p>
+                <p>Clique <a href="backend/login.php">aqui</a> para realizar login</p>
             </section>
             <section id='s-5'>
                 <h2>Fale Conosco</h2>
@@ -95,7 +89,7 @@
                     <div class="form-inner">
                         <div class="column">
                             <input type="text" required="" minlength="3" maxlength="24" placeholder="Nome (obrigatório)" class="form-input" name="name">
-                            <input type="email" required="" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Email (obrigatório)" class="form-input" name="email">
+                            <input type="email" required="" minlength="7" maxlength="48" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Email (obrigatório)" class="form-input" name="email">
                             <input type="text" required="" maxlength="500" placeholder="Assunto (obrigatório)" class="form-input" name="subject">
                             <input type="text" maxlength="255" placeholder="Assunto (opcional)" class="form-input" name="subject" />
                         </div>
@@ -112,7 +106,7 @@
                     <div class="form-inner">
                         <div class="column">
                             <input type="text" required="" minlength="3" maxlength="24" placeholder="Nome (obrigatório)" class="form-input" name="name" />
-                            <input type="email" required="" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Email (obrigatório)" class="form-input" name="email" />
+                            <input type="email" required="" minlength="7" maxlength="48" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Email (obrigatório)" class="form-input" name="email" />
                             <input type="hidden" name="MAX_FILE_SIZE" value="500" />
                             <label>Curriculo (obrigatório):
                                 <input type="file" required="" class="form-input" name="cv" />
@@ -126,23 +120,21 @@
                 </form>
             </section>
         </article>
-    </div>
-</div>
-
-<div id="modal-lg" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modal-lg-remoteCall">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title">Carregando...</h4>
-            </div>
-            <div class="modal-body">
-                <p>Carregando...</p>
+        <div id="modal-lg" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modal-lg-remoteCall">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">Carregando...</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Carregando...</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
-
 
 <script src="js/vendor/modernizr-custom.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>

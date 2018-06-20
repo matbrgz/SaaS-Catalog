@@ -273,6 +273,28 @@ a:hover {
 }
 
 
+.login-container {
+	display: none;	/*inline-block*/
+	position: relative;
+	vertical-align: middle;
+	overflow: hidden;
+}
+
+.form-inner {
+    overflow: hidden;
+    padding: 20px;
+}
+.form-input {
+    width: 100%;
+    border: 5px solid #ebebeb;
+    position: relative;
+    margin-bottom: 5px;
+}
+.form-btn {
+    clear: both;
+    float: right;
+}
+
 .wrapper {
 	margin: 30px auto;
 	width: 80%;

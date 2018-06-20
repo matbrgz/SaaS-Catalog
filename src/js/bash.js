@@ -95,20 +95,6 @@ var Terminal = Terminal || function (cmdLineContainer, outputContainer) {
 				args = args.splice(1); // Remove cmd from arg list.
 			}
 			switch (cmd) {
-			case 'login':
-				var url = args.join(' ');
-				if (!url) {
-					output('Usage: ' + cmd + ' username -p password');
-					output('Example: ' + cmd + ' matheusrv -p a1b2c3d4');
-					break;
-				}
-				$.get(url, function (data) {
-					var encodedStr = data.replace(/[\u00A0-\u9999<>\&]/gim, function (i) {
-						return '&#' + i.charCodeAt(0) + ';';
-					});
-					output('<pre>' + encodedStr + '</pre>');
-				});
-				break;
 			case 'cat':
 				var url = args.join(' ');
 				if (!url) {
@@ -131,11 +117,6 @@ var Terminal = Terminal || function (cmdLineContainer, outputContainer) {
 				var appendDiv = jQuery($('.clock-container')[0].outerHTML);
 				appendDiv.attr('style', 'display:inline-block');
 				output_.appendChild(appendDiv[0]);
-				break;
-			case 'login':
-				var appendDiv2 = jQuery($('.login-container')[0].outerHTML);
-				appendDiv2.attr('style', 'display:inline-block');
-				output_.appendChild(appendDiv2[0]);
 				break;
             case 'read':
                 var appendDiv3 = jQuery($('.read-container')[0].outerHTML);
@@ -164,9 +145,12 @@ var Terminal = Terminal || function (cmdLineContainer, outputContainer) {
 				for (var prop in codehelper_ip) result += prop + ": " + codehelper_ip[prop] + "<br>";
 				output(result);
 				break;
+			case 'exit':
+				window.history.back();
+				break;
 			default:
 				if (cmd) {
-					output(cmd + ': command not found');
+					output(cmd + ': comando não encontrado');
 				}
 			};
 			window.scrollTo(0, getDocHeight_());
@@ -200,7 +184,7 @@ var Terminal = Terminal || function (cmdLineContainer, outputContainer) {
 	//
 	return {
 		init: function () {
-			output('<img align="left" src="img/terminal.png" width="128" height="128" style="padding: 0px 10px 20px 0px"><h2 style="letter-spacing: 4px">SaaS Backend CLI</h2><p>' + new Date() + '</p><p>Enter "help" for more information.</p>');
+			output('<img align="left" src="img/terminal.png" width="128" height="128" style="padding: 0 10px 20px 0"><h2 style="letter-spacing: 4px">SaaS Backend CLI</h2><p>' + new Date() + '</p><p>Digite "help" para mais informações.</p>');
 		},
 		output: output
 	}
